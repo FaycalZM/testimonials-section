@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+body {
+    font-family: 'Barlow Semi Condensed', 'sans-serif';
+    background-color: hsl(210, 46%, 95%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.main-section {
+    width: 90%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 20px;
+}
+
+.article {
+    border-radius: 10px;
+    padding: 10px 30px;
+    z-index: 2;
+}
+
+.article-header {
+    display: flex;
+    align-items: center;
+}
+
+.article-header>div {
+    margin-left: 10px;
+}
+
+.article-header>div>h4 {
+    margin-bottom: -15px;
+    color: hsl(0, 0%, 81%);
+}
+
+.article-header>div>p {
+    color: hsla(0, 0%, 81%, 0.5);
+}
+
+.article-header>img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.article>h5 {
+    color: hsla(0, 0%, 100%, 0.95);
+    font-size: 20px;
+    line-height: 1.75rem;
+    letter-spacing: .2px;
+    margin-top: -0.1rem;
+}
+
+.article>p {
+    color: hsla(0, 0%, 81%, 0.7);
+    line-height: 1.5rem;
+    margin-top: -0.3rem;
+}
+
+.one {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    background-color: hsl(263, 55%, 52%);
+    position: relative;
+}
+
+.two {
+    grid-row: 1;
+    grid-column: 3;
+    background-color: hsl(217, 19%, 35%);
+}
+
+.three {
+    grid-row: 1 / span 2;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.four {
+    grid-row: 2;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.five {
+    grid-column: 2 / 4;
+    background-color: hsl(219, 29%, 14%);
+}
+
+.three>.article-header>div>h4,
+.four>.article-header>div>h4 {
+    color: hsl(217, 19%, 35%);
+}
+
+.three>.article-header>div>p,
+.four>.article-header>div>p {
+    color: hsla(217, 19%, 35%, 0.5);
+}
+
+.three>h5,
+.four>h5 {
+    color: hsl(217, 19%, 35%);
+}
+
+.three>p,
+.four>p {
+    color: hsla(217, 19%, 35%, 0.7)
+}
+
+.quotation-icon {
+    position: absolute;
+    height: 25%;
+    width: 20%;
+    right: 10%;
+    z-index: -1;
+}
+
+
+@media screen and (max-width : 1024px) {
+    .main-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .article {
+        margin-bottom: 1rem;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width : 768px) {
+    .quotation-icon {
+        display: none;
+    }
+
+    .article {
+        width: 90%;
+    }
+}
